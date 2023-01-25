@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.print-area{
+    width: 80%;
+    margin: 20px auto;
+    padding-bottom: 20px;
+}
+.print-area .header{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(83, 77, 69);
+    display: flex;
+    align-items: center;
+    position: relative;
+} 
+.img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    top: 50px;
+    left: 65px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 10px gray;
+    cursor: pointer;
+    transition: .5s;
+    user-select: none;
+    filter: grayscale(100%);
+}   
+.header img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px black;
+}
+.header-text{
+    color: white;
+    width: 60%;
+    margin-left: auto;
+}
+.header-text .h1{
+    font-size: 80px;
+    font-weight: normal;
+}
+.header-text .p{
+    font-size: 20px;
+    color: white;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left-area{
+    width: 30%;
+    background-color: lightgrey;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+.left-area .contacto{
+    margin-top: 130px;
+    padding: 0 30px;
+}
+.contacto .h4{
+    font-size: 30px;
+    font-weight: normal;
+    margin: 20px 0;
+}    
+.contacto .h5{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.contacto .p{
+    font-size: 17px;
+}
+.habilidades{
+    margin-top: 20px;
+}
+.habilidades .h1{
+    font-size: 30px;
+    font-weight: normal;
+}
+.bars{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat (2, 1);
+    grid-gap: 20px 10px;
+}
+.bars .bar .p{
+    font-size: 15px;
+    font-weight: bold;
+}
+.bars span{
+    display:block;
+    width: 100%;
+    height: 10px;
+    background-color: grey;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.bar span::before{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+.seguir .h1{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+.seguir .h4{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.seguir .p{
+    font-size: 15px;
+    color: gray;
+}
+.right-area{
+    width: 70%;
+    padding: 50px;
+}
+.right-area .h1{
+    font-size: 35px;
+    font-weight: normal;
+}
+.right-area .h1 .span{
+    margin-right: 30px;
+    font-size: 50px;
+    color: lightgray;
+}
+.right-area .p{
+    padding-left: 70px;
+    text-align: justify;
+    word-break: break-all;
+    font-size: 17px;
+    color: gray;
+    margin: 10px;
+}
+.grupos-de-trabajo{
+    margin-left: 10px 0;
+}
+.trabajo .grupos-de-trabajo{
+    position: relative;
+}
+.grupos-de-trabajo .h3{
+    font-size: 22px;
+    font-weight: normal;
+    padding-left: 70px;
+}
+.grupos-de-trabajo .h4{
+    font-size: 18px;
+    padding-left: 70px;
+    font-weight: normal;
+}
+.grupos-de-trabajo .span{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.educacion{
+    margin-top: 30px;
+}
+.grupo-escolar{
+    position: relative;
+    margin: 10px 0;
+}
+.grupo-escolar .h4{
+    padding-left: 70px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.grupo-escolar span{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+.grupo-escolar .p{
+    padding-left: 80px;
+}
+.button{
+    font-size: 25px;
+    padding: 10px 20px;
+    margin: 50px 0 50px 140px;
+    background-color: rgba(83,83,83);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: .5s;
+}
+.button:hover{
+    background-color: black;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+
+
+
+@media print{
+    .body *{
+        visibility: hidden;
+    }
+    .print-area *{
+        visibility: visible;
+    }
+}
